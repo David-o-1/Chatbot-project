@@ -1,0 +1,160 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
+      "responses": [
+        "Hello! Im glad you reached out. Can I ask your name first?",
+        "Hi there. Before we start, what should I call you?"
+      ]
+    },
+    {
+      "tag": "name_capture",
+      "patterns": ["my name is (?P<username>\\w+)", "call me (?P<username>\\w+)"],
+      "responses": [
+        "Nice to meet you, {username}. How have you been feeling lately?",
+        "Thanks for sharing, {username}. What's been on your mind recently?"
+      ]
+    },
+    {
+      "tag": "current_emotion",
+      "patterns": [
+        "I feel (?P<emotion>[\\w\\s]+)",
+        "Im feeling (?P<emotion>[\\w\\s]+)",
+        "I am feeling (?P<emotion>[\\w\\s]+)"
+      ],
+      "responses": [
+        "I hear that you feel {emotion}. Can you tell me what might have caused it?",
+        "Feeling {emotion} can be difficult. When did this start?"
+      ]
+    },
+    {
+      "tag": "multiple_emotions",
+      "patterns": ["I feel (?P<emotion1>[\\w\\s]+) and (?P<emotion2>[\\w\\s]+)"],
+      "responses": [
+        "You mentioned feeling {emotion1} and {emotion2}. Which one feels stronger?",
+        "Managing {emotion1} and {emotion2} together can be tough. How do they interact?"
+      ]
+    },
+    {
+      "tag": "reason_followup",
+      "patterns": ["because (?P<reason>.*)", "its due to (?P<reason>.*)"],
+      "responses": [
+        "I understand. How does {reason} affect you on a daily basis?",
+        "That sounds challenging. How long have you been dealing with {reason}?"
+      ]
+    },
+    {
+      "tag": "stress_followup",
+      "patterns": ["I am stressed", "I feel stressed", "work is stressful"],
+      "responses": [
+        "Stress can be heavy. What do you usually do to cope with it?",
+        "When stress hits, what helps you feel a bit better?"
+      ]
+    },
+    {
+      "tag": "coping_strategy",
+      "patterns": ["I try to (?P<strategy>[\\w\\s]+)", "I meditate", "I exercise"],
+      "responses": [
+        "That's a great approach. How does doing {strategy} affect your mood?",
+        "Interesting. Does {strategy} help you feel less stressed?"
+      ]
+    },
+    {
+      "tag": "desire_feeling",
+      "patterns": ["I want to feel (?P<feeling>[\\w\\s]+)", "I wish I felt (?P<feeling>[\\w\\s]+)"],
+      "responses": [
+        "Wanting to feel {feeling} makes sense. What would that look like in your life?",
+        "What might change for you if you felt {feeling} more often?"
+      ]
+    },
+    {
+      "tag": "self_reflection",
+      "patterns": ["I think (?P<thought>.*)", "I feel like (?P<thought>.*)"],
+      "responses": [
+        "Reflecting on that is important. Why do you think that way?",
+        "That sounds like a deep feeling. How does {thought} affect your daily life?"
+      ]
+    },
+    {
+      "tag": "sleep_issue",
+      "patterns": ["I can't sleep", "I have trouble sleeping", "my sleep is bad"],
+      "responses": [
+        "Sleep is important. Can you tell me more about what keeps you awake?",
+        "How does poor sleep affect your mood and energy during the day?"
+      ]
+    },
+    {
+      "tag": "gratitude_followup",
+      "patterns": ["I am thankful for (?P<thing>.*)", "I appreciate (?P<thing>.*)"],
+      "responses": [
+        "Its wonderful you notice {thing}. How does it make you feel?",
+        "Gratitude can really shift your mood. What do you notice about yourself when you focus on {thing}?"
+      ]
+    },
+    {
+      "tag": "sentiment_positive",
+      "patterns": ["I feel happy", "Im excited", "I feel good", "I am joyful"],
+      "responses": [
+        "Thats great to hear. What made you feel this way?",
+        "Positive feelings are wonderful. How do you usually maintain them?"
+      ]
+    },
+    {
+      "tag": "sentiment_negative",
+      "patterns": ["I feel sad", "I'm depressed", "I feel angry", "I am frustrated"],
+      "responses": [
+        "Im sorry you feel {emotion}. What do you think triggered it?",
+        "Negative feelings are valid. How are you coping with {emotion}?"
+      ]
+    },
+    {
+      "tag": "farewell",
+      "patterns": ["bye", "goodbye", "exit", "quit", "see you later"],
+      "responses": [
+        "Take care of yourself, {username}. Im here whenever you want to continue.",
+        "Goodbye for now, {username}. Remember to be gentle with yourself."
+      ]
+    },
+    {
+      "tag": "confidence_boost",
+      "patterns": ["I feel insecure", "I doubt myself", "I lack confidence"],
+      "responses": [
+        "Its normal to feel that way sometimes. What usually makes you feel more confident?",
+        "Feeling insecure can be tough. Can you think of a moment when you felt capable?"
+      ]
+    },
+    {
+      "tag": "goal_setting",
+      "patterns": ["I want to achieve (?P<goal>[\\w\\s]+)", "My goal is to (?P<goal>[\\w\\s]+)"],
+      "responses": [
+        "That sounds like a meaningful goal: {goal}. What steps could you take to get there?",
+        "Working toward {goal} can be challenging. What motivates you the most?"
+      ]
+    },
+    {
+      "tag": "social_support",
+      "patterns": ["I talk to (?P<person>[\\w\\s]+)", "My friend (?P<person>[\\w\\s]+) helps me"],
+      "responses": [
+        "Its great that {person} is there for you. How does talking to them make you feel?",
+        "Support from {person} can be really valuable. Do you feel it helps reduce your stress?"
+      ]
+    },
+    {
+      "tag": "relaxation_activity",
+      "patterns": ["I like to (?P<activity>[\\w\\s]+) to relax", "Relaxing by (?P<activity>[\\w\\s]+) helps me"],
+      "responses": [
+        "{activity} sounds like a relaxing way to unwind. How often do you do it?",
+        "Doing {activity} can help calm your mind. Does it help you feel better immediately?"
+      ]
+    },
+    {
+      "tag": "future_focus",
+      "patterns": ["I am worried about the future", "I dont know what will happen"],
+      "responses": [
+        "Its understandable to feel uncertain about the future. What can you focus on right now?",
+        "Thinking about the future can be stressful. How do you usually manage these thoughts?"
+      ]
+    }
+  ]
+}
